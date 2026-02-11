@@ -1,0 +1,25 @@
+{
+    "name": "claude-cockpit-backend",
+    "version": "1.0.0",
+    "description": "Claude Cockpit UI 後端伺服器",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "keywords": [
+        "claude",
+        "terminal",
+        "websocket",
+        "pty"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "node-pty": "^0.10.1",
+        "socket.io": "^4.6.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    }
+}

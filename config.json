@@ -1,0 +1,63 @@
+{
+  "project": {
+    "name": "Claude Cockpit UI",
+    "version": "1.0.0",
+    "description": "專業的 Web UI 控制台，用於與 Claude Code 進行互動"
+  },
+  "backend": {
+    "port": 3001,
+    "bashPath": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal": {
+      "name": "xterm-color",
+      "cols": 80,
+      "rows": 30
+    }
+  },
+  "frontend": {
+    "port": 5173,
+    "socketUrl": "http://localhost:3001",
+    "theme": {
+      "background": "#020617",
+      "foreground": "#34d399",
+      "fontFamily": "JetBrains Mono, Fira Code, monospace",
+      "fontSize": 14
+    }
+  },
+  "roles": [
+    {
+      "id": "pm",
+      "title": "PM",
+      "color": "border-purple-500",
+      "keywords": ["[PM]", "planning", "requirements"]
+    },
+    {
+      "id": "rd",
+      "title": "RD",
+      "color": "border-blue-500",
+      "keywords": ["[RD]", "implementing", "coding"]
+    },
+    {
+      "id": "ui",
+      "title": "UI",
+      "color": "border-green-500",
+      "keywords": ["[UI]", "design", "styling"]
+    },
+    {
+      "id": "test",
+      "title": "TEST",
+      "color": "border-yellow-500",
+      "keywords": ["[TEST]", "testing", "verification"]
+    },
+    {
+      "id": "sec",
+      "title": "SEC",
+      "color": "border-red-500",
+      "keywords": ["[SEC]", "security", "audit"]
+    }
+  ],
+  "statusKeywords": {
+    "running": ["Thinking...", "Processing...", "Working on"],
+    "done": ["[DONE]", "Completed", "Finished"],
+    "idle": ["Waiting", "Ready"]
+  }
+}
