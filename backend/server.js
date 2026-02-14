@@ -150,7 +150,7 @@ io.on('connection', (socket) => {
   let ptyProcess;
 
   try {
-    ptyProcess = pty.spawn(BASH_PATH, [], {
+    ptyProcess = pty.spawn(BASH_PATH, ['--login', '-i'], {
       name: config.backend.terminal.name,
       cols: config.backend.terminal.cols,
       rows: config.backend.terminal.rows,
