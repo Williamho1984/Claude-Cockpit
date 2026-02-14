@@ -155,7 +155,13 @@ io.on('connection', (socket) => {
       cols: config.backend.terminal.cols,
       rows: config.backend.terminal.rows,
       cwd: process.env.HOME || process.env.USERPROFILE,
-      env: process.env
+      env: {
+        ...process.env,
+        TERM: config.backend.terminal.name,
+        COLORTERM: 'truecolor',
+        TERM_PROGRAM: 'xterm',
+        FORCE_COLOR: '1'
+      }
     });
 
     activeSessions.set(socket.id, ptyProcess);
