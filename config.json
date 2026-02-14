@@ -9,7 +9,7 @@
     "bashPath": "C:\\Program Files\\Git\\bin\\bash.exe",
     "terminal": {
       "name": "xterm-256color",
-      "cols": 220,
+      "cols": 200,
       "rows": 50
     }
   },

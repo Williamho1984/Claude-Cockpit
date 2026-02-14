@@ -97,6 +97,9 @@ export const Terminal = forwardRef<TerminalHandle, TerminalProps>(({
 
         socket.on('connect', () => {
             setIsConnected(true);
+            // 連線後立即同步 PTY 尺寸到實際 Xterm 大小，避免跑版
+            fitAddon.fit();
+            socket.emit('resize', { cols: xterm.cols, rows: xterm.rows });
             xterm.writeln('\x1b[1;32m✓ Connected to server\x1b[0m');
             xterm.writeln('');
         });
